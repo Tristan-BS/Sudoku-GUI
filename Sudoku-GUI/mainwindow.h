@@ -28,7 +28,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    int GridSize = 16;
+    int GridSize = 9;
+    int FillInPercentage = 15;
 
 private:
     Ui::MainWindow *ui;

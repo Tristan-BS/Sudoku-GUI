@@ -20,14 +20,15 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    this->setWindowTitle("Sudoku Game");
+    this->setWindowTitle("Sudoku");
+    ui->L_GameHeading->setText(QString::number(GridSize) + "x" + QString::number(GridSize) + " Sudoku");
     ui->TB_MainTabs->tabBar()->setVisible(false);
 
     connect(GameTimer, &QTimer::timeout, this, &MainWindow::updateTimer);
 
     if (isValidGridSize(GridSize)) {
         createSudokuGrid(GridSize);
-        FillSudokuGrid(99);
+        FillSudokuGrid(FillInPercentage);
 
         StartTime = QTime::currentTime();
         GameTimer->start(1000);
@@ -71,6 +72,38 @@ void MainWindow::createSudokuGrid(int size) {
             Cell->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
             Cell->setAlignment(Qt::AlignCenter);
             Cell->setFont(QFont("Segoe UI", 12));
+
+            // Calculate the border
+            QString topBorder = (row % 3 == 0) ? "2px solid black" : "1px solid lightgrey";
+            QString bottomBorder = ((row + 1) % 3 == 0) ? "2px solid black" : "1px solid lightgrey";
+            QString leftBorder = (col % 3 == 0) ? "2px solid black" : "1px solid lightgrey";
+            QString rightBorder = ((col + 1) % 3 == 0) ? "2px solid black" : "1px solid lightgrey";
+
+            // Outline the 9er blocks
+            if (row == 0) topBorder = "3px solid black";
+            if (row == size - 1) bottomBorder = "3px solid black";
+            if (col == 0) leftBorder = "3px solid black";
+            if (col == size - 1) rightBorder = "3px solid black";
+
+            // set Stylesheet
+            Cell->setStyleSheet(
+                QString(
+                    "QLineEdit {"
+                    "    background-color: white;"
+                    "    color: black;"
+                    "    font-family: 'Segoe UI';"
+                    "    font-size: 14px;"
+                    "    border-top: %1;"
+                    "    border-bottom: %2;"
+                    "    border-left: %3;"
+                    "    border-right: %4;"
+                    "    padding: 0;"
+                    "}"
+                    "QLineEdit:focus {"
+                    "    border: 1px solid black;"
+                    "}"
+                    ).arg(topBorder).arg(bottomBorder).arg(leftBorder).arg(rightBorder)
+                );
 
             QRegularExpression regExp(regExpPattern);
             Cell->setValidator(new QRegularExpressionValidator(regExp, this));

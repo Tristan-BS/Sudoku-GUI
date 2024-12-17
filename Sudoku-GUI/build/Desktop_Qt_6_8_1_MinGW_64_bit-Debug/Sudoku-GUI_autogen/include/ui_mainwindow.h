@@ -175,6 +175,7 @@ public:
         sizePolicy1.setHeightForWidth(B_ClearFields->sizePolicy().hasHeightForWidth());
         B_ClearFields->setSizePolicy(sizePolicy1);
         B_ClearFields->setMaximumSize(QSize(16777215, 16777215));
+        B_ClearFields->setStyleSheet(QString::fromUtf8(""));
 
         gridLayout_2->addWidget(B_ClearFields, 0, 5, 1, 1);
 
