@@ -25,16 +25,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->TB_MainTabs->tabBar()->setVisible(false);
 
     connect(GameTimer, &QTimer::timeout, this, &MainWindow::updateTimer);
-
-    if (isValidGridSize(GridSize)) {
-        createSudokuGrid(GridSize);
-        FillSudokuGrid(FillInPercentage);
-
-        StartTime = QTime::currentTime();
-        GameTimer->start(1000);
-    } else {
-        cout << "Ungültige GridSize: " << GridSize << endl;
-    }
 }
 
 MainWindow::~MainWindow() {
@@ -289,10 +279,21 @@ void MainWindow::on_B_Settings_clicked() {
     ui->TB_MainTabs->setCurrentIndex(3);
 }
 
-void MainWindow::on_B_Exit_clicked() {
-    exit(0);
+void MainWindow::on_B_PlayGame_clicked() {
+    ui->TB_MainTabs->setCurrentIndex(4);
+    GameTimer->stop();
+
+    if (isValidGridSize(GridSize)) {
+        createSudokuGrid(GridSize);
+        FillSudokuGrid(FillInPercentage);
+
+        StartTime = QTime::currentTime();
+        GameTimer->start(1000);
+    } else {
+        cout << "Ungültige GridSize: " << GridSize << endl;
+    }
 }
 
-void MainWindow::on_B_PlayGame_clicked() {
-    cout << "HSIEFSE" << endl;
+void MainWindow::on_B_Exit_clicked() {
+    exit(0);
 }

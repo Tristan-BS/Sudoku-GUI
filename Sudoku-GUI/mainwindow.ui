@@ -196,7 +196,7 @@ QPushButton:disabled {
     <item row="0" column="1">
      <widget class="QTabWidget" name="TB_MainTabs">
       <property name="currentIndex">
-       <number>4</number>
+       <number>0</number>
       </property>
       <property name="tabBarAutoHide">
        <bool>false</bool>

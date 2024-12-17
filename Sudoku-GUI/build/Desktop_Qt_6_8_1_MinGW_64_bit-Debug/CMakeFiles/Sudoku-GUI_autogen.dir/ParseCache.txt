@@ -395,6 +395,6 @@ C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/mainwindow.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h
+C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/main.cpp
 C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/mainwindow.cpp
  uic:ui_mainwindow.h
-C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/main.cpp
