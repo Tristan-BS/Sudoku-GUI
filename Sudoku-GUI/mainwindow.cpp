@@ -2,6 +2,11 @@
 #include "ui_mainwindow.h"
 
 #include <iostream>
+#include <cmath>
+#include <cstdlib>
+#include <ctime>
+#include <QMessageBox>
+#include <unordered_set>
 
 using std::cout;
 using std::endl;
@@ -10,22 +15,35 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
     , GridLayout(nullptr)
+    , GameTimer(new QTimer(this))
+    , elapsedSeconds(0)
 {
     ui->setupUi(this);
 
     this->setWindowTitle("Sudoku Game");
     ui->TB_MainTabs->tabBar()->setVisible(false);
 
+    connect(GameTimer, &QTimer::timeout, this, &MainWindow::updateTimer);
 
-    createSudokuGrid(GridSize);
+    if (isValidGridSize(GridSize)) {
+        createSudokuGrid(GridSize);
+        FillSudokuGrid(99);
 
-    FillSudokuGrid(99);
+        StartTime = QTime::currentTime();
+        GameTimer->start(1000);
+    } else {
+        cout << "Ungültige GridSize: " << GridSize << endl;
+    }
 }
 
 MainWindow::~MainWindow() {
     delete ui;
 }
 
+bool MainWindow::isValidGridSize(int size) {
+    int root = std::sqrt(size);
+    return root * root == size;
+}
 
 void MainWindow::createSudokuGrid(int size) {
     if (GridLayout != nullptr) {
@@ -41,24 +59,16 @@ void MainWindow::createSudokuGrid(int size) {
     Cells.resize(size, std::vector<QLineEdit*>(size, nullptr));
 
     QString regExpPattern;
-    if (size == 4) {
-        regExpPattern = "[1-4]";
-    } else if(size == 5) {
-        regExpPattern = "[1-5]";
-    } else if(size == 6) {
-        regExpPattern = "[1-6]";
-    } else if(size == 7) {
-        regExpPattern = "[1-7]";
-    } else if(size == 8) {
-        regExpPattern = "[1-8]";
-    } else if(size == 9) {
-        regExpPattern = "[1-9]";
+    if (size <= 9) {
+        regExpPattern = QString("[1-%1]").arg(size);
+    } else {
+        regExpPattern = QString("([1-9]|1[0-%1])").arg(size - 10);
     }
 
     for (int row = 0; row < size; ++row) {
         for (int col = 0; col < size; ++col) {
             QLineEdit *Cell = new QLineEdit(this);
-            Cell->setFixedSize(40, 40);
+            Cell->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
             Cell->setAlignment(Qt::AlignCenter);
             Cell->setFont(QFont("Segoe UI", 12));
 
@@ -68,6 +78,8 @@ void MainWindow::createSudokuGrid(int size) {
             Cells[row][col] = Cell;
         }
     }
+
+    ui->W_GridContainer->setLayout(GridLayout);
 }
 
 void MainWindow::FillSudokuGrid(int Percentage) {
@@ -84,7 +96,7 @@ void MainWindow::FillSudokuGrid(int Percentage) {
         int Row = std::rand() % GridSize;
         int Col = std::rand() % GridSize;
 
-        if(Cells[Row][Col]->text().isEmpty()) {
+        if (Cells[Row][Col]->text().isEmpty()) {
             Cells[Row][Col]->setText(QString::number(SolvedGrid[Row][Col]));
             Cells[Row][Col]->setReadOnly(true);
             CellsToFill--;
@@ -94,12 +106,12 @@ void MainWindow::FillSudokuGrid(int Percentage) {
 
 bool MainWindow::SolveSudoku(std::vector<std::vector<int>>& Grid) {
     for (int Row = 0; Row < GridSize; ++Row) {
-        for(int Col = 0; Col < GridSize; ++Col) {
-            if(Grid[Row][Col] == 0) {
+        for (int Col = 0; Col < GridSize; ++Col) {
+            if (Grid[Row][Col] == 0) {
                 for (int Num = 1; Num <= GridSize; ++Num) {
                     if (isSafe(Grid, Row, Col, Num)) {
                         Grid[Row][Col] = Num;
-                        if(SolveSudoku(Grid)) {
+                        if (SolveSudoku(Grid)) {
                             return true;
                         }
 
@@ -114,19 +126,15 @@ bool MainWindow::SolveSudoku(std::vector<std::vector<int>>& Grid) {
 }
 
 bool MainWindow::isSafe(std::vector<std::vector<int>>& Grid, int Row, int Col, int Num) {
-    int blockSize = std::sqrt(GridSize);
+    int blockSize = std::sqrt(GridSize); // Block size
 
     for (int x = 0; x < GridSize; ++x) {
-        if (Grid[Row][x] == Num || Grid[x][Col] == Num || Grid[Row - Row % blockSize + x / blockSize][Col - Col % blockSize + x % blockSize] == Num) {
+        if (Grid[Row][x] == Num || Grid[x][Col] == Num ||
+            Grid[Row - Row % blockSize + x / blockSize][Col - Col % blockSize + x % blockSize] == Num) {
             return false;
         }
     }
     return true;
-}
-
-bool MainWindow::isValidGridSize(int size) {
-    int root = std::sqrt(size);
-    return root * root == size;
 }
 
 void MainWindow::on_B_Check_clicked() {
@@ -137,9 +145,14 @@ void MainWindow::on_B_Check_clicked() {
     for (int row = 0; row < GridSize; ++row) {
         numSet.clear();
         for (int col = 0; col < GridSize; ++col) {
-            int num = Cells[row][col]->text().toInt();
+            QString cellText = Cells[row][col]->text();
+            if (cellText.isEmpty()) {
+                QMessageBox::information(this, "Verification failed", "The Sudoku has empty cells.");
+                return;
+            }
+            int num = cellText.toInt();
             if (numSet.find(num) != numSet.end()) {
-                QMessageBox::information(this, "Verification failed", "The Sudoku has not been solved correctly.");
+                QMessageBox::information(this, "Verification failed", "The Sudoku has duplicate numbers in a row.");
                 return;
             }
             numSet.insert(num);
@@ -150,9 +163,14 @@ void MainWindow::on_B_Check_clicked() {
     for (int col = 0; col < GridSize; ++col) {
         numSet.clear();
         for (int row = 0; row < GridSize; ++row) {
-            int num = Cells[row][col]->text().toInt();
+            QString cellText = Cells[row][col]->text();
+            if (cellText.isEmpty()) {
+                QMessageBox::information(this, "Verification failed", "The Sudoku has empty cells.");
+                return;
+            }
+            int num = cellText.toInt();
             if (numSet.find(num) != numSet.end()) {
-                QMessageBox::information(this, "Verification failed", "The Sudoku has not been solved correctly.");
+                QMessageBox::information(this, "Verification failed", "The Sudoku has duplicate numbers in a column.");
                 return;
             }
             numSet.insert(num);
@@ -165,9 +183,14 @@ void MainWindow::on_B_Check_clicked() {
             numSet.clear();
             for (int row = 0; row < blockSize; ++row) {
                 for (int col = 0; col < blockSize; ++col) {
-                    int num = Cells[blockRow * blockSize + row][blockCol * blockSize + col]->text().toInt();
+                    QString cellText = Cells[blockRow * blockSize + row][blockCol * blockSize + col]->text();
+                    if (cellText.isEmpty()) {
+                        QMessageBox::information(this, "Verification failed", "The Sudoku has empty cells.");
+                        return;
+                    }
+                    int num = cellText.toInt();
                     if (numSet.find(num) != numSet.end()) {
-                        QMessageBox::information(this, "Verification failed", "The Sudoku has not been solved correctly.");
+                        QMessageBox::information(this, "Verification failed", "The Sudoku has duplicate numbers in a block.");
                         return;
                     }
                     numSet.insert(num);
@@ -179,12 +202,42 @@ void MainWindow::on_B_Check_clicked() {
     QMessageBox::information(this, "Check successful", "Congratulations! \nYou have solved the Sudoku correctly!");
 }
 
-void MainWindow::on_B_ClearFields_clicked() {
+void MainWindow::updateTimer() {
+    QTime currentTime = QTime::currentTime();
+    int totalElapsedSeconds = elapsedSeconds + StartTime.secsTo(currentTime);
 
+    int hours = totalElapsedSeconds / 3600;
+    int minutes = (totalElapsedSeconds % 3600) / 60;
+    int seconds = totalElapsedSeconds % 60;
+
+    QString timeString = QString("Time: %1:%2:%3")
+                             .arg(hours, 2, 10, QChar('0'))
+                             .arg(minutes, 2, 10, QChar('0'))
+                             .arg(seconds, 2, 10, QChar('0'));
+
+    ui->L_Timer->setText(timeString);
+}
+
+void MainWindow::on_B_ClearFields_clicked() {
+    for (int row = 0; row < GridSize; ++row) {
+        for (int col = 0; col < GridSize; ++col) {
+            if (!Cells[row][col]->isReadOnly()) {
+                Cells[row][col]->clear();
+            }
+        }
+    }
 }
 
 void MainWindow::on_B_ToggleTime_clicked() {
-
+    if (GameTimer->isActive()) {
+        GameTimer->stop();
+        elapsedSeconds += StartTime.secsTo(QTime::currentTime());
+        ui->B_ToggleTime->setText("Resume");
+    } else {
+        StartTime = QTime::currentTime();
+        GameTimer->start(1000);
+        ui->B_ToggleTime->setText("Pause");
+    }
 }
 
 void MainWindow::on_B_Menu_clicked() {

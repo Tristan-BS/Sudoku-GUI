@@ -42,17 +42,26 @@ public:
     QWidget *T_Statistics;
     QWidget *T_Settings;
     QWidget *T_Sudoku;
-    QWidget *W_GridContainer;
-    QPushButton *B_Check;
-    QPushButton *B_ClearFields;
-    QPushButton *B_ToggleTime;
+    QGridLayout *gridLayout_2;
     QLabel *L_Timer;
+    QPushButton *B_ToggleTime;
+    QSpacerItem *horizontalSpacer;
+    QLabel *L_GameHeading;
+    QSpacerItem *horizontalSpacer_2;
+    QPushButton *B_ClearFields;
+    QPushButton *B_Check;
+    QWidget *W_GridContainer;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
         MainWindow->resize(800, 600);
+        QSizePolicy sizePolicy(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
+        MainWindow->setSizePolicy(sizePolicy);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         gridLayout = new QGridLayout(centralwidget);
@@ -121,22 +130,70 @@ public:
         TB_MainTabs->addTab(T_Settings, QString());
         T_Sudoku = new QWidget();
         T_Sudoku->setObjectName("T_Sudoku");
-        W_GridContainer = new QWidget(T_Sudoku);
-        W_GridContainer->setObjectName("W_GridContainer");
-        W_GridContainer->setGeometry(QRect(9, 39, 671, 501));
-        B_Check = new QPushButton(T_Sudoku);
-        B_Check->setObjectName("B_Check");
-        B_Check->setGeometry(QRect(569, 10, 111, 25));
-        B_Check->setFont(font);
-        B_ClearFields = new QPushButton(T_Sudoku);
-        B_ClearFields->setObjectName("B_ClearFields");
-        B_ClearFields->setGeometry(QRect(480, 10, 80, 24));
-        B_ToggleTime = new QPushButton(T_Sudoku);
-        B_ToggleTime->setObjectName("B_ToggleTime");
-        B_ToggleTime->setGeometry(QRect(100, 10, 80, 24));
+        gridLayout_2 = new QGridLayout(T_Sudoku);
+        gridLayout_2->setObjectName("gridLayout_2");
         L_Timer = new QLabel(T_Sudoku);
         L_Timer->setObjectName("L_Timer");
-        L_Timer->setGeometry(QRect(10, 10, 91, 21));
+        sizePolicy.setHeightForWidth(L_Timer->sizePolicy().hasHeightForWidth());
+        L_Timer->setSizePolicy(sizePolicy);
+        L_Timer->setMaximumSize(QSize(80, 24));
+
+        gridLayout_2->addWidget(L_Timer, 0, 0, 1, 1);
+
+        B_ToggleTime = new QPushButton(T_Sudoku);
+        B_ToggleTime->setObjectName("B_ToggleTime");
+        QSizePolicy sizePolicy1(QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Fixed);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(B_ToggleTime->sizePolicy().hasHeightForWidth());
+        B_ToggleTime->setSizePolicy(sizePolicy1);
+        B_ToggleTime->setMinimumSize(QSize(0, 0));
+        B_ToggleTime->setMaximumSize(QSize(16777215, 16777215));
+
+        gridLayout_2->addWidget(B_ToggleTime, 0, 1, 1, 1);
+
+        horizontalSpacer = new QSpacerItem(79, 20, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Minimum);
+
+        gridLayout_2->addItem(horizontalSpacer, 0, 2, 1, 1);
+
+        L_GameHeading = new QLabel(T_Sudoku);
+        L_GameHeading->setObjectName("L_GameHeading");
+        QFont font1;
+        font1.setPointSize(16);
+        font1.setBold(true);
+        L_GameHeading->setFont(font1);
+        L_GameHeading->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        gridLayout_2->addWidget(L_GameHeading, 0, 3, 1, 1);
+
+        horizontalSpacer_2 = new QSpacerItem(78, 20, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Minimum);
+
+        gridLayout_2->addItem(horizontalSpacer_2, 0, 4, 1, 1);
+
+        B_ClearFields = new QPushButton(T_Sudoku);
+        B_ClearFields->setObjectName("B_ClearFields");
+        sizePolicy1.setHeightForWidth(B_ClearFields->sizePolicy().hasHeightForWidth());
+        B_ClearFields->setSizePolicy(sizePolicy1);
+        B_ClearFields->setMaximumSize(QSize(16777215, 16777215));
+
+        gridLayout_2->addWidget(B_ClearFields, 0, 5, 1, 1);
+
+        B_Check = new QPushButton(T_Sudoku);
+        B_Check->setObjectName("B_Check");
+        sizePolicy1.setHeightForWidth(B_Check->sizePolicy().hasHeightForWidth());
+        B_Check->setSizePolicy(sizePolicy1);
+        B_Check->setMaximumSize(QSize(16777215, 16777215));
+        B_Check->setFont(font);
+
+        gridLayout_2->addWidget(B_Check, 0, 6, 1, 1);
+
+        W_GridContainer = new QWidget(T_Sudoku);
+        W_GridContainer->setObjectName("W_GridContainer");
+        sizePolicy.setHeightForWidth(W_GridContainer->sizePolicy().hasHeightForWidth());
+        W_GridContainer->setSizePolicy(sizePolicy);
+
+        gridLayout_2->addWidget(W_GridContainer, 1, 0, 1, 7);
+
         TB_MainTabs->addTab(T_Sudoku, QString());
 
         gridLayout->addWidget(TB_MainTabs, 0, 1, 1, 1);
@@ -165,10 +222,11 @@ public:
         TB_MainTabs->setTabText(TB_MainTabs->indexOf(T_Levels), QCoreApplication::translate("MainWindow", "Levels", nullptr));
         TB_MainTabs->setTabText(TB_MainTabs->indexOf(T_Statistics), QCoreApplication::translate("MainWindow", "Statistics", nullptr));
         TB_MainTabs->setTabText(TB_MainTabs->indexOf(T_Settings), QCoreApplication::translate("MainWindow", "Settings", nullptr));
-        B_Check->setText(QCoreApplication::translate("MainWindow", "Check for Answer", nullptr));
-        B_ClearFields->setText(QCoreApplication::translate("MainWindow", "Clear All", nullptr));
-        B_ToggleTime->setText(QCoreApplication::translate("MainWindow", "Pause", nullptr));
         L_Timer->setText(QCoreApplication::translate("MainWindow", "Time: 24:59:59", nullptr));
+        B_ToggleTime->setText(QCoreApplication::translate("MainWindow", "Pause", nullptr));
+        L_GameHeading->setText(QCoreApplication::translate("MainWindow", "XxX Sudoku", nullptr));
+        B_ClearFields->setText(QCoreApplication::translate("MainWindow", "Clear All", nullptr));
+        B_Check->setText(QCoreApplication::translate("MainWindow", "Check for Answer", nullptr));
         TB_MainTabs->setTabText(TB_MainTabs->indexOf(T_Sudoku), QCoreApplication::translate("MainWindow", "Game", nullptr));
     } // retranslateUi
 

@@ -10,8 +10,10 @@
 #include <QTabBar>
 #include <unordered_set>
 #include <QMessageBox>
+#include <QTimer>
+#include <QTime>
 
-#define VERSION = "0.3.2-BETA"
+#define VERSION = "0.11.5-BETA"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -26,7 +28,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    int GridSize = 5;
+    int GridSize = 16;
 
 private:
     Ui::MainWindow *ui;
@@ -41,6 +43,10 @@ private:
     void createSudokuGrid(int size);
     void FillSudokuGrid(int Percentage);
 
+    QTimer *GameTimer;
+    QTime StartTime;
+    int elapsedSeconds;
+
 private slots:
 
     // Buttons
@@ -53,5 +59,7 @@ private slots:
     void on_B_Check_clicked();
     void on_B_ClearFields_clicked();
     void on_B_ToggleTime_clicked();
+
+    void updateTimer();
 };
 #endif // MAINWINDOW_H

@@ -1,6 +1,8 @@
 C:/APC/Eigene\ Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Sudoku-GUI_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/APC/Eigene\ Programme/C++/Sudoku-GUI/Sudoku-GUI/mainwindow.h \
   C:/APC/Eigene\ Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Sudoku-GUI_autogen/moc_predefs.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/QRegularExpression \
+  C:/Qt/6.8.1/mingw_64/include/QtCore/QTime \
+  C:/Qt/6.8.1/mingw_64/include/QtCore/QTimer \
   C:/Qt/6.8.1/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/q20iterator.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/q20memory.h \
@@ -15,11 +17,13 @@ C:/APC/Eigene\ Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_
   C:/Qt/6.8.1/mingw_64/include/QtCore/qatomic.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qatomic_cxx11.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qbasicatomic.h \
+  C:/Qt/6.8.1/mingw_64/include/QtCore/qbasictimer.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qbindingstorage.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qbytearray.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qbytearrayalgorithms.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qbytearraylist.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qbytearrayview.h \
+  C:/Qt/6.8.1/mingw_64/include/QtCore/qcalendar.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qchar.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qcompare.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qcompare_impl.h \
@@ -33,6 +37,7 @@ C:/APC/Eigene\ Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_
   C:/Qt/6.8.1/mingw_64/include/QtCore/qcontiguouscache.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qdatastream.h \
+  C:/Qt/6.8.1/mingw_64/include/QtCore/qdatetime.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qdebug.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qendian.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qexceptionhandling.h \
@@ -107,6 +112,7 @@ C:/APC/Eigene\ Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_
   C:/Qt/6.8.1/mingw_64/include/QtCore/qtdeprecationmarkers.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qtenvironmentvariables.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qtextstream.h \
+  C:/Qt/6.8.1/mingw_64/include/QtCore/qtimer.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qtmetamacros.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qtnoop.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qtpreprocessorsupport.h \

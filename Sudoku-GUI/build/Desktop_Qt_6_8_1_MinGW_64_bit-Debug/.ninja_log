@@ -1,50 +1,29 @@
 # ninja log v6
-15	548	7561413350648976	Sudoku-GUI_autogen/timestamp	a5056c653e32602b
-1968	6045	7561398927925305	CMakeFiles/Sudoku-GUI.dir/main.cpp.obj	f800c7ef15a6e98b
-15	548	7561413350648976	Sudoku-GUI_autogen/mocs_compilation.cpp	a5056c653e32602b
-3327	3922	7561413383764931	Sudoku-GUI.exe	9d48e7c5ed36d558
-15	548	7561413350648976	C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Sudoku-GUI_autogen/timestamp	a5056c653e32602b
-15	548	7561413350648976	C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Sudoku-GUI_autogen/mocs_compilation.cpp	a5056c653e32602b
-1867	5971	7561398926909918	CMakeFiles/Sudoku-GUI.dir/Sudoku-GUI_autogen/mocs_compilation.cpp.obj	c356bcff5690fb54
-549	3327	7561413355984450	CMakeFiles/Sudoku-GUI.dir/mainwindow.cpp.obj	856ce742c44bfa91
-59	3364	7561418821211198	Sudoku-GUI_autogen/timestamp	a5056c653e32602b
-59	3364	7561418821211198	Sudoku-GUI_autogen/mocs_compilation.cpp	a5056c653e32602b
-59	3364	7561418821211198	C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Sudoku-GUI_autogen/timestamp	a5056c653e32602b
-59	3364	7561418821211198	C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Sudoku-GUI_autogen/mocs_compilation.cpp	a5056c653e32602b
-3368	7685	7561418823505384	CMakeFiles/Sudoku-GUI.dir/Sudoku-GUI_autogen/mocs_compilation.cpp.obj	c356bcff5690fb54
-3557	7704	7561418825386347	CMakeFiles/Sudoku-GUI.dir/main.cpp.obj	f800c7ef15a6e98b
-3598	8260	7561418825806383	CMakeFiles/Sudoku-GUI.dir/mainwindow.cpp.obj	856ce742c44bfa91
-18	766	7561419381022687	Sudoku-GUI_autogen/timestamp	a5056c653e32602b
-18	766	7561419381022687	Sudoku-GUI_autogen/mocs_compilation.cpp	a5056c653e32602b
-18	766	7561419381022687	C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Sudoku-GUI_autogen/timestamp	a5056c653e32602b
-18	766	7561419381022687	C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Sudoku-GUI_autogen/mocs_compilation.cpp	a5056c653e32602b
-770	5836	7561419388543868	CMakeFiles/Sudoku-GUI.dir/mainwindow.cpp.obj	856ce742c44bfa91
-5836	7472	7561419439203691	Sudoku-GUI.exe	9d48e7c5ed36d558
-20	1834	7561419753366049	Sudoku-GUI_autogen/timestamp	a5056c653e32602b
-20	1834	7561419753366049	Sudoku-GUI_autogen/mocs_compilation.cpp	a5056c653e32602b
-20	1834	7561419753366049	C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Sudoku-GUI_autogen/timestamp	a5056c653e32602b
-20	1834	7561419753366049	C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Sudoku-GUI_autogen/mocs_compilation.cpp	a5056c653e32602b
-1838	6087	7561419755497485	CMakeFiles/Sudoku-GUI.dir/Sudoku-GUI_autogen/mocs_compilation.cpp.obj	c356bcff5690fb54
-1960	6176	7561419756730399	CMakeFiles/Sudoku-GUI.dir/main.cpp.obj	f800c7ef15a6e98b
-2003	6759	7561419757153696	CMakeFiles/Sudoku-GUI.dir/mainwindow.cpp.obj	856ce742c44bfa91
-6759	8376	7561419804712967	Sudoku-GUI.exe	9d48e7c5ed36d558
-17	713	7561421094857846	Sudoku-GUI_autogen/timestamp	a5056c653e32602b
-17	713	7561421094857846	Sudoku-GUI_autogen/mocs_compilation.cpp	a5056c653e32602b
-17	713	7561421094857846	C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Sudoku-GUI_autogen/timestamp	a5056c653e32602b
-17	713	7561421094857846	C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Sudoku-GUI_autogen/mocs_compilation.cpp	a5056c653e32602b
-718	6222	7561421101860267	CMakeFiles/Sudoku-GUI.dir/mainwindow.cpp.obj	856ce742c44bfa91
-6222	8181	7561421156900969	Sudoku-GUI.exe	9d48e7c5ed36d558
-21	1707	7561422509993589	Sudoku-GUI_autogen/timestamp	a5056c653e32602b
-21	1707	7561422509993589	Sudoku-GUI_autogen/mocs_compilation.cpp	a5056c653e32602b
-21	1707	7561422509993589	C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Sudoku-GUI_autogen/timestamp	a5056c653e32602b
-21	1707	7561422509993589	C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Sudoku-GUI_autogen/mocs_compilation.cpp	a5056c653e32602b
-1712	5839	7561422512220348	CMakeFiles/Sudoku-GUI.dir/Sudoku-GUI_autogen/mocs_compilation.cpp.obj	c356bcff5690fb54
-1825	6046	7561422513345550	CMakeFiles/Sudoku-GUI.dir/main.cpp.obj	f800c7ef15a6e98b
-19	1730	7561422858685850	Sudoku-GUI_autogen/timestamp	a5056c653e32602b
-19	1730	7561422858685850	Sudoku-GUI_autogen/mocs_compilation.cpp	a5056c653e32602b
-19	1730	7561422858685850	C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Sudoku-GUI_autogen/timestamp	a5056c653e32602b
-19	1730	7561422858685850	C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Sudoku-GUI_autogen/mocs_compilation.cpp	a5056c653e32602b
-1734	6594	7561422860902941	CMakeFiles/Sudoku-GUI.dir/Sudoku-GUI_autogen/mocs_compilation.cpp.obj	c356bcff5690fb54
-1955	6660	7561422863124875	CMakeFiles/Sudoku-GUI.dir/main.cpp.obj	f800c7ef15a6e98b
-2002	7475	7561422863581145	CMakeFiles/Sudoku-GUI.dir/mainwindow.cpp.obj	856ce742c44bfa91
-7475	9806	7561422918311077	Sudoku-GUI.exe	9d48e7c5ed36d558
+2789	7458	7561466138372716	CMakeFiles/Sudoku-GUI.dir/main.cpp.obj	f800c7ef15a6e98b
+33	2610	7561466134161733	Sudoku-GUI_autogen/timestamp	a5056c653e32602b
+8140	9897	7561466191875898	Sudoku-GUI.exe	9d48e7c5ed36d558
+33	2610	7561466134161733	Sudoku-GUI_autogen/mocs_compilation.cpp	a5056c653e32602b
+33	2610	7561466134161733	C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Sudoku-GUI_autogen/timestamp	a5056c653e32602b
+33	2610	7561466134161733	C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Sudoku-GUI_autogen/mocs_compilation.cpp	a5056c653e32602b
+2617	7369	7561466136643207	CMakeFiles/Sudoku-GUI.dir/Sudoku-GUI_autogen/mocs_compilation.cpp.obj	c356bcff5690fb54
+2835	8140	7561466138832891	CMakeFiles/Sudoku-GUI.dir/mainwindow.cpp.obj	856ce742c44bfa91
+33	720	7561467226947758	Sudoku-GUI_autogen/timestamp	a5056c653e32602b
+33	720	7561467226947758	Sudoku-GUI_autogen/mocs_compilation.cpp	a5056c653e32602b
+33	720	7561467226947758	C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Sudoku-GUI_autogen/timestamp	a5056c653e32602b
+33	720	7561467226947758	C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Sudoku-GUI_autogen/mocs_compilation.cpp	a5056c653e32602b
+725	5890	7561467233866459	CMakeFiles/Sudoku-GUI.dir/mainwindow.cpp.obj	856ce742c44bfa91
+5891	7633	7561467285528632	Sudoku-GUI.exe	9d48e7c5ed36d558
+18	729	7561468533959339	Sudoku-GUI_autogen/timestamp	a5056c653e32602b
+18	729	7561468533959339	Sudoku-GUI_autogen/mocs_compilation.cpp	a5056c653e32602b
+18	729	7561468533959339	C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Sudoku-GUI_autogen/timestamp	a5056c653e32602b
+18	729	7561468533959339	C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Sudoku-GUI_autogen/mocs_compilation.cpp	a5056c653e32602b
+734	5550	7561468541119150	CMakeFiles/Sudoku-GUI.dir/mainwindow.cpp.obj	856ce742c44bfa91
+5550	7389	7561468589277228	Sudoku-GUI.exe	9d48e7c5ed36d558
+20	3061	7561469482949430	Sudoku-GUI_autogen/timestamp	a5056c653e32602b
+20	3061	7561469482949430	Sudoku-GUI_autogen/mocs_compilation.cpp	a5056c653e32602b
+20	3061	7561469482949430	C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Sudoku-GUI_autogen/timestamp	a5056c653e32602b
+20	3061	7561469482949430	C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Sudoku-GUI_autogen/mocs_compilation.cpp	a5056c653e32602b
+3067	8288	7561469485674181	CMakeFiles/Sudoku-GUI.dir/Sudoku-GUI_autogen/mocs_compilation.cpp.obj	c356bcff5690fb54
+3230	8330	7561469487302655	CMakeFiles/Sudoku-GUI.dir/main.cpp.obj	f800c7ef15a6e98b
+3275	9055	7561469487754403	CMakeFiles/Sudoku-GUI.dir/mainwindow.cpp.obj	856ce742c44bfa91
+9055	10783	7561469545554862	Sudoku-GUI.exe	9d48e7c5ed36d558
