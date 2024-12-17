@@ -1,0 +1,9 @@
+C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Release/CMakeFiles/Sudoku-GUI.dir
+C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Release/CMakeFiles/edit_cache.dir
+C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Release/CMakeFiles/rebuild_cache.dir
+C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Release/CMakeFiles/list_install_components.dir
+C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Release/CMakeFiles/install.dir
+C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Release/CMakeFiles/install/local.dir
+C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Release/CMakeFiles/install/strip.dir
+C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Release/CMakeFiles/Sudoku-GUI_autogen_timestamp_deps.dir
+C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Release/CMakeFiles/Sudoku-GUI_autogen.dir

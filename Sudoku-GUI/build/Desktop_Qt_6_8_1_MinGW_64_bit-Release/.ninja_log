@@ -1,0 +1,9 @@
+# ninja log v6
+13	2200	7561489081403749	Sudoku-GUI_autogen/timestamp	80bd315c83b34d25
+13	2200	7561489081403749	Sudoku-GUI_autogen/mocs_compilation.cpp	80bd315c83b34d25
+13	2200	7561489081403749	C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Release/Sudoku-GUI_autogen/timestamp	80bd315c83b34d25
+13	2200	7561489081403749	C:/APC/Eigene Programme/C++/Sudoku-GUI/Sudoku-GUI/build/Desktop_Qt_6_8_1_MinGW_64_bit-Release/Sudoku-GUI_autogen/mocs_compilation.cpp	80bd315c83b34d25
+2208	6759	7561489083714749	CMakeFiles/Sudoku-GUI.dir/Sudoku-GUI_autogen/mocs_compilation.cpp.obj	9db35e31932a2171
+2317	6854	7561489084800551	CMakeFiles/Sudoku-GUI.dir/main.cpp.obj	3f97eea5f038a8d2
+2362	7725	7561489085236087	CMakeFiles/Sudoku-GUI.dir/mainwindow.cpp.obj	bc51ecdeba6d4471
+7725	9170	7561489138871178	Sudoku-GUI.exe	33534ceec64027f7
