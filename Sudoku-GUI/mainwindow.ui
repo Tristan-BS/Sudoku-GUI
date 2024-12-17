@@ -27,8 +27,20 @@
        <widget class="QPushButton" name="B_Menu">
         <property name="font">
          <font>
-          <pointsize>10</pointsize>
+          <family>Segoe UI</family>
+          <pointsize>-1</pointsize>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	background-color: white; 
+	color: black;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px;
+}</string>
         </property>
         <property name="text">
          <string>Menu</string>
@@ -39,8 +51,20 @@
        <widget class="QPushButton" name="B_Levels">
         <property name="font">
          <font>
-          <pointsize>10</pointsize>
+          <family>Segoe UI</family>
+          <pointsize>-1</pointsize>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	background-color: white; 
+	color: black;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px;
+}</string>
         </property>
         <property name="text">
          <string>Levels</string>
@@ -51,8 +75,20 @@
        <widget class="QPushButton" name="B_Statistics">
         <property name="font">
          <font>
-          <pointsize>10</pointsize>
+          <family>Segoe UI</family>
+          <pointsize>-1</pointsize>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	background-color: white; 
+	color: black;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px;
+}</string>
         </property>
         <property name="text">
          <string>Statistics</string>
@@ -63,8 +99,20 @@
        <widget class="QPushButton" name="B_Settings">
         <property name="font">
          <font>
-          <pointsize>10</pointsize>
+          <family>Segoe UI</family>
+          <pointsize>-1</pointsize>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	background-color: white; 
+	color: black;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px;
+}</string>
         </property>
         <property name="text">
          <string>Settings</string>
@@ -88,8 +136,20 @@
        <widget class="QPushButton" name="B_Exit">
         <property name="font">
          <font>
-          <pointsize>10</pointsize>
+          <family>Segoe UI</family>
+          <pointsize>-1</pointsize>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	background-color: white; 
+	color: black;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px;
+}</string>
         </property>
         <property name="text">
          <string>Exit</string>
@@ -196,6 +256,17 @@
             <height>16777215</height>
            </size>
           </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+	background-color: white; 
+	color: black;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px;
+}</string>
+          </property>
           <property name="text">
            <string>Pause</string>
           </property>
@@ -211,7 +282,7 @@
           </property>
           <property name="sizeHint" stdset="0">
            <size>
-            <width>79</width>
+            <width>88</width>
             <height>20</height>
            </size>
           </property>
@@ -243,7 +314,7 @@
           </property>
           <property name="sizeHint" stdset="0">
            <size>
-            <width>78</width>
+            <width>87</width>
             <height>20</height>
            </size>
           </property>
@@ -264,7 +335,15 @@
            </size>
           </property>
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">QPushButton {
+	background-color: white; 
+	color: black;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px;
+}</string>
           </property>
           <property name="text">
            <string>Clear All</string>
@@ -287,8 +366,20 @@
           </property>
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <family>Segoe UI</family>
+            <pointsize>-1</pointsize>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+	background-color: white; 
+	color: black;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px;
+}</string>
           </property>
           <property name="text">
            <string>Check for Answer</string>

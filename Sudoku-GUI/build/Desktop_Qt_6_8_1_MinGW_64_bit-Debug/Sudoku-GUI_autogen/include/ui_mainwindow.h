@@ -71,26 +71,62 @@ public:
         B_Menu = new QPushButton(centralwidget);
         B_Menu->setObjectName("B_Menu");
         QFont font;
-        font.setPointSize(10);
+        font.setFamilies({QString::fromUtf8("Segoe UI")});
         B_Menu->setFont(font);
+        B_Menu->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	background-color: white; \n"
+"	color: black;\n"
+"    font-family: 'Segoe UI';\n"
+"    font-size: 12px;\n"
+"    border: 1px solid black;\n"
+"    border-radius: 5px;\n"
+"    padding: 3px;\n"
+"}"));
 
         verticalLayout->addWidget(B_Menu);
 
         B_Levels = new QPushButton(centralwidget);
         B_Levels->setObjectName("B_Levels");
         B_Levels->setFont(font);
+        B_Levels->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	background-color: white; \n"
+"	color: black;\n"
+"    font-family: 'Segoe UI';\n"
+"    font-size: 12px;\n"
+"    border: 1px solid black;\n"
+"    border-radius: 5px;\n"
+"    padding: 3px;\n"
+"}"));
 
         verticalLayout->addWidget(B_Levels);
 
         B_Statistics = new QPushButton(centralwidget);
         B_Statistics->setObjectName("B_Statistics");
         B_Statistics->setFont(font);
+        B_Statistics->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	background-color: white; \n"
+"	color: black;\n"
+"    font-family: 'Segoe UI';\n"
+"    font-size: 12px;\n"
+"    border: 1px solid black;\n"
+"    border-radius: 5px;\n"
+"    padding: 3px;\n"
+"}"));
 
         verticalLayout->addWidget(B_Statistics);
 
         B_Settings = new QPushButton(centralwidget);
         B_Settings->setObjectName("B_Settings");
         B_Settings->setFont(font);
+        B_Settings->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	background-color: white; \n"
+"	color: black;\n"
+"    font-family: 'Segoe UI';\n"
+"    font-size: 12px;\n"
+"    border: 1px solid black;\n"
+"    border-radius: 5px;\n"
+"    padding: 3px;\n"
+"}"));
 
         verticalLayout->addWidget(B_Settings);
 
@@ -101,6 +137,15 @@ public:
         B_Exit = new QPushButton(centralwidget);
         B_Exit->setObjectName("B_Exit");
         B_Exit->setFont(font);
+        B_Exit->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	background-color: white; \n"
+"	color: black;\n"
+"    font-family: 'Segoe UI';\n"
+"    font-size: 12px;\n"
+"    border: 1px solid black;\n"
+"    border-radius: 5px;\n"
+"    padding: 3px;\n"
+"}"));
 
         verticalLayout->addWidget(B_Exit);
 
@@ -149,10 +194,19 @@ public:
         B_ToggleTime->setSizePolicy(sizePolicy1);
         B_ToggleTime->setMinimumSize(QSize(0, 0));
         B_ToggleTime->setMaximumSize(QSize(16777215, 16777215));
+        B_ToggleTime->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	background-color: white; \n"
+"	color: black;\n"
+"    font-family: 'Segoe UI';\n"
+"    font-size: 12px;\n"
+"    border: 1px solid black;\n"
+"    border-radius: 5px;\n"
+"    padding: 2px;\n"
+"}"));
 
         gridLayout_2->addWidget(B_ToggleTime, 0, 1, 1, 1);
 
-        horizontalSpacer = new QSpacerItem(79, 20, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Minimum);
+        horizontalSpacer = new QSpacerItem(88, 20, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Minimum);
 
         gridLayout_2->addItem(horizontalSpacer, 0, 2, 1, 1);
 
@@ -166,7 +220,7 @@ public:
 
         gridLayout_2->addWidget(L_GameHeading, 0, 3, 1, 1);
 
-        horizontalSpacer_2 = new QSpacerItem(78, 20, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Minimum);
+        horizontalSpacer_2 = new QSpacerItem(87, 20, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Minimum);
 
         gridLayout_2->addItem(horizontalSpacer_2, 0, 4, 1, 1);
 
@@ -175,7 +229,15 @@ public:
         sizePolicy1.setHeightForWidth(B_ClearFields->sizePolicy().hasHeightForWidth());
         B_ClearFields->setSizePolicy(sizePolicy1);
         B_ClearFields->setMaximumSize(QSize(16777215, 16777215));
-        B_ClearFields->setStyleSheet(QString::fromUtf8(""));
+        B_ClearFields->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	background-color: white; \n"
+"	color: black;\n"
+"    font-family: 'Segoe UI';\n"
+"    font-size: 12px;\n"
+"    border: 1px solid black;\n"
+"    border-radius: 5px;\n"
+"    padding: 2px;\n"
+"}"));
 
         gridLayout_2->addWidget(B_ClearFields, 0, 5, 1, 1);
 
@@ -185,6 +247,15 @@ public:
         B_Check->setSizePolicy(sizePolicy1);
         B_Check->setMaximumSize(QSize(16777215, 16777215));
         B_Check->setFont(font);
+        B_Check->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	background-color: white; \n"
+"	color: black;\n"
+"    font-family: 'Segoe UI';\n"
+"    font-size: 12px;\n"
+"    border: 1px solid black;\n"
+"    border-radius: 5px;\n"
+"    padding: 2px;\n"
+"}"));
 
         gridLayout_2->addWidget(B_Check, 0, 6, 1, 1);
 
