@@ -81,6 +81,13 @@ public:
 "    border: 1px solid black;\n"
 "    border-radius: 5px;\n"
 "    padding: 3px;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: lightgrey;  \n"
+"}\n"
+"QPushButton:disabled {\n"
+"	background-color: grey;\n"
+"	color: darkgrey;\n"
 "}"));
 
         verticalLayout->addWidget(B_Menu);
@@ -96,6 +103,13 @@ public:
 "    border: 1px solid black;\n"
 "    border-radius: 5px;\n"
 "    padding: 3px;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: lightgrey;  \n"
+"}\n"
+"QPushButton:disabled {\n"
+"	background-color: grey;\n"
+"	color: darkgrey;\n"
 "}"));
 
         verticalLayout->addWidget(B_Levels);
@@ -111,6 +125,13 @@ public:
 "    border: 1px solid black;\n"
 "    border-radius: 5px;\n"
 "    padding: 3px;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: lightgrey;  \n"
+"}\n"
+"QPushButton:disabled {\n"
+"	background-color: grey;\n"
+"	color: darkgrey;\n"
 "}"));
 
         verticalLayout->addWidget(B_Statistics);
@@ -126,6 +147,13 @@ public:
 "    border: 1px solid black;\n"
 "    border-radius: 5px;\n"
 "    padding: 3px;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: lightgrey;  \n"
+"}\n"
+"QPushButton:disabled {\n"
+"	background-color: grey;\n"
+"	color: darkgrey;\n"
 "}"));
 
         verticalLayout->addWidget(B_Settings);
@@ -145,6 +173,13 @@ public:
 "    border: 1px solid black;\n"
 "    border-radius: 5px;\n"
 "    padding: 3px;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: lightgrey;  \n"
+"}\n"
+"QPushButton:disabled {\n"
+"	background-color: grey;\n"
+"	color: darkgrey;\n"
 "}"));
 
         verticalLayout->addWidget(B_Exit);
@@ -202,6 +237,13 @@ public:
 "    border: 1px solid black;\n"
 "    border-radius: 5px;\n"
 "    padding: 2px;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: lightgrey;  \n"
+"}\n"
+"QPushButton:disabled {\n"
+"	background-color: grey;\n"
+"	color: darkgrey;\n"
 "}"));
 
         gridLayout_2->addWidget(B_ToggleTime, 0, 1, 1, 1);
@@ -237,6 +279,13 @@ public:
 "    border: 1px solid black;\n"
 "    border-radius: 5px;\n"
 "    padding: 2px;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: lightgrey;  \n"
+"}\n"
+"QPushButton:disabled {\n"
+"	background-color: grey;\n"
+"	color: darkgrey;\n"
 "}"));
 
         gridLayout_2->addWidget(B_ClearFields, 0, 5, 1, 1);
@@ -255,6 +304,13 @@ public:
 "    border: 1px solid black;\n"
 "    border-radius: 5px;\n"
 "    padding: 2px;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: lightgrey;  \n"
+"}\n"
+"QPushButton:disabled {\n"
+"	background-color: grey;\n"
+"	color: darkgrey;\n"
 "}"));
 
         gridLayout_2->addWidget(B_Check, 0, 6, 1, 1);
